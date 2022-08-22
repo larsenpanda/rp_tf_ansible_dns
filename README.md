@@ -41,4 +41,10 @@ To run the terraform along with the node.js script, enter the deployment-automat
 
 `terraform apply -auto-approve -json && terraform output -json > ./tf_out.json && cd .. && node app.js`
 
-### What happened
+### Now what?
+
+Now look at the file that got created, `redpanda-dns-out.json`, you can use this to share with your dns team or do automation to upsert those entries as appropriate.
+
+Look at the hosts.ini, it's ready to go with the dns hostnames. If everything looks good and your dns names get added just run the ansible-playbook command:
+
+`ansible-playbook --private-key <your_private_key> -i hosts.ini -v ansible/playbooks/provision-node.yml`
