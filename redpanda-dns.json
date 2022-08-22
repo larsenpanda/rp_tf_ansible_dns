@@ -1,0 +1,23 @@
+[
+    {
+        "nodetype": "redpanda-node",
+        "nodename": "redpanda-0",
+        "domain": "zone1.company.com"
+
+    },
+    {
+        "nodetype": "redpanda-node",
+        "nodename": "redpanda-1",
+        "domain": "zone1.company.com"
+    },
+    {
+        "nodetype": "redpanda-node",
+        "nodename": "redpanda-2",
+        "domain": "zone1.company.com"
+    },
+    {
+        "nodetype": "monitor-node",
+        "nodename": "rp-monitor",
+        "domain": "zone1.company.com"
+    }
+]
