@@ -14,8 +14,8 @@ First get the TF/Ansible scripts from Redpanda github:
 
 ### Modify with this repo
 
-1. Put ```app.js``` into the root of the `deployment-automation` repo folder
-2. Put ```redpanda-dns.json``` into the root of the `deployment-automation` repo folder
+1. Put `app.js` into the root of the `deployment-automation` repo folder
+2. Put `redpanda-dns.json` into the root of the `deployment-automation` repo folder
 
 Optional: Update aws/cluster.tf to add "Name" tag so you can identify the redpanda nodes for this run (note: Name : "redpanda-tf-test", edit as desired)
 
@@ -33,3 +33,8 @@ locals {
   }
 }
 ```
+
+### Run it
+
+To run the terraform along with the node.js script, enter the deployment-automation/aws (if AWS) folder and run the following:
+`terraform apply -auto-approve -json && terraform output -json > ./tf_out.json && cd .. && node app.js`
