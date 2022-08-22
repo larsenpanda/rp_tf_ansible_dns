@@ -19,7 +19,8 @@ First get the TF/Ansible scripts from Redpanda github:
 
 Optional: Update aws/cluster.tf to add "Name" tag so you can identify the redpanda nodes for this run (note: Name : "redpanda-tf-test", edit as desired)
 
-```locals {
+```
+locals {
   uuid = random_uuid.cluster.result
   timestamp = time_static.timestamp.rfc3339
   deployment_id = "redpanda-${local.uuid}-${local.timestamp}"
@@ -30,4 +31,5 @@ Optional: Update aws/cluster.tf to add "Name" tag so you can identify the redpan
     iam_username : trimprefix(data.aws_arn.caller_arn.resource, "user/")
     Name	: "redpanda-tf-test"
   }
-}```
+}
+```
