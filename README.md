@@ -37,7 +37,7 @@ locals {
 
 ### Run it
 
-To run the terraform along with the node.js script, enter the deployment-automation/aws (if AWS) folder and run the following:
+To run the terraform along with the node.js script, enter the `deployment-automation/aws` (if AWS) folder and run the following:
 
 `terraform apply -auto-approve -json && terraform output -json > ./tf_out.json && cd .. && node app.js`
 
